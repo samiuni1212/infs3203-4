@@ -1,5 +1,5 @@
 from flask_sqlalchemy import SQLAlchemy
-from datetime import datetime, UTC
+from datetime import datetime, timezone
 
 db = SQLAlchemy()
 
@@ -11,7 +11,7 @@ class Contact(db.Model):
     phone = db.Column(db.String(20), nullable=False)
     email = db.Column(db.String(120))
     type = db.Column(db.String(20), nullable=False)
-    created_at = db.Column(db.DateTime, default=lambda: datetime.now(UTC))
+    created_at = db.Column(db.DateTime, default=lambda: datetime.now(timezone.UTC))
     
     def to_dict(self):
         return {
@@ -21,4 +21,4 @@ class Contact(db.Model):
             'email': self.email,
             'type': self.type,
             'created_at': self.created_at.isoformat()
-        } 
+        }
