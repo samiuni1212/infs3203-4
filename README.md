@@ -1,3 +1,4 @@
+
 # Contact List Manager
 
 A Flask-based web application for managing contacts. This application intentionally has some bugs for educational purposes in software testing.
@@ -141,3 +142,6 @@ deactivate
 ## Note for Testing
 
 This application contains intentionally introduced bugs for educational purposes in software testing. These bugs are distributed across different components of the application.
+
+# INFS3203-4
+
